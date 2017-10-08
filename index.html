@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"  >
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>Document</title>
+	
+	<link rel="stylesheet" href="css/style.css" />
+	<script>
+		var html=document.documentElement;
+		html.style.fontSize=html.clientWidth/375*50+'px';
+	</script>
+</head>
+<body ng-app="eight">
+	<div class="wrap">
+		<header class="header">
+			
+		</header>
+		<section class="section">
+			<ul class="act">
+				<li><span class='active'>进行中</span></li>
+				<li><span>已揭晓</span></li>
+				<li><span>已中奖</span></li>
+			</ul>
+			<div class="cons">
+				<div class="con">
+					<div class="con-title">
+						
+						<img src="img/1.png"/>
+						<div class="con-bottom">
+							<span class="num">239232期</span>
+							<span>吉祥如意</span>
+						</div>
+						<div class="con-dev">
+							<p>开奖倒计时: <span>10:23:23</span></p>
+						</div>
+					</div>
+					<div class="con-text" ng-controller="indexController">{{name}}
+						<p class="number">支持份数:100人次</p>
+						<p class="time">支持时间: <span>2016:02:23 12:23:22</span> </p>
+					</div>
+					<div class="con-btn">
+						<span>再次夺宝</span>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		<footer class="footer">
+			
+		</footer>
+	</div>
+</body>
+<script src="js/angular.min.js"></script>
+<script>
+	var app=angular.module('eight',[]);
+	app.controller('indexController',function($scope){
+		$scope.name='你好';
+		$scope.data={
+		 [{'img':'1.png','title':'你好','num':'2344'},
+		 {'img':'1.png','title':'你好','num':'2344'},
+		 {'img':'1.png','title':'你好','num':'2344'},
+		 {'img':'1.png','title':'你好','num':'2344'},
+		 {'img':'1.png','title':'你好','num':'2344'}
+		 ]
+		}
+		console.log($scope.data);
+	})
+	
+</script>
+</html>
